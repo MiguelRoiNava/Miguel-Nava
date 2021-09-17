@@ -1,0 +1,332 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled6.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyNNuTH0Z2/9BS91uOl5f9Vf",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/MiguelRoiNava/Miguel-Nava/blob/main/practical%20exam%20prelim%201\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "5fS0ZdNodaSh"
+      },
+      "source": [
+        "1.a (WY)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "uiK6Tj9ydWOo",
+        "outputId": "8e690876-454f-4f42-a41e-da91b5d9f2cd"
+      },
+      "source": [
+        "import numpy as np\n",
+        "W = np.array ([[1,-3],[2,-2],[3,1]])\n",
+        "Y = np.array ([[1,2,0],[0,-1,2]])\n",
+        "\n",
+        "print(\"Vector W is\",W)\n",
+        "print()\n",
+        "print(\"Vector Y is\",Y)\n",
+        "print()\n",
+        "print(\"WY\")\n",
+        "dot = np.dot(W,Y)\n",
+        "print(dot)\n",
+        "print()"
+      ],
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Vector W is [[ 1 -3]\n",
+            " [ 2 -2]\n",
+            " [ 3  1]]\n",
+            "\n",
+            "Vector Y is [[ 1  2  0]\n",
+            " [ 0 -1  2]]\n",
+            "\n",
+            "WY\n",
+            "[[ 1  5 -6]\n",
+            " [ 2  6 -4]\n",
+            " [ 3  5  2]]\n",
+            "\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "nkYRdy-IdYUK"
+      },
+      "source": [
+        "1.b (Z+Z)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "uNlLllxmdjzU",
+        "outputId": "092165c9-52fd-47b2-93e0-f9ab938f1d12"
+      },
+      "source": [
+        "import numpy as np\n",
+        "Z = np.array ([[0,1],[2,3]])\n",
+        "\n",
+        "print(\"Vector Z is\", Z)"
+      ],
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Vector Z is [[0 1]\n",
+            " [2 3]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "wHxFyvcMd9rj"
+      },
+      "source": [
+        "1.c (3X)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9tjRkyE9doKx",
+        "outputId": "4fc1536e-816b-4bac-e67e-376ad9851418"
+      },
+      "source": [
+        "import numpy as np\n",
+        "X = np.array ([[3,2,1],[-1,2,3],[2,-1,1]])\n",
+        "\n",
+        "print(\"Vector X is\",X)\n",
+        "print()\n",
+        "print(\"3*X\")\n",
+        "print(3*X)"
+      ],
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Vector X is [[ 3  2  1]\n",
+            " [-1  2  3]\n",
+            " [ 2 -1  1]]\n",
+            "\n",
+            "3*X\n",
+            "[[ 9  6  3]\n",
+            " [-3  6  9]\n",
+            " [ 6 -3  3]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "dLNchHYTeAZ4"
+      },
+      "source": [
+        "2.a (YW)^2"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Xnm1xBAadqhd",
+        "outputId": "e2c167d7-0f80-4ac2-cf78-27dc3a9fff2a"
+      },
+      "source": [
+        "import numpy as np\n",
+        "Y = np.array ([[1,2,0],[0,-1,2]])\n",
+        "W = np.array ([[1,-3],[2,-2],[3,1]])\n",
+        "\n",
+        "print(\"Vector Y is\",Y)\n",
+        "print()\n",
+        "print(\"Vector W is\",W)\n",
+        "print()\n",
+        "print(\"(YW)^2\")\n",
+        "print(np.dot(Y,W)^2)"
+      ],
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Vector Y is [[ 1  2  0]\n",
+            " [ 0 -1  2]]\n",
+            "\n",
+            "Vector W is [[ 1 -3]\n",
+            " [ 2 -2]\n",
+            " [ 3  1]]\n",
+            "\n",
+            "(YW)^2\n",
+            "[[ 7 -5]\n",
+            " [ 6  6]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "9eKZRnkEeG6p"
+      },
+      "source": [
+        "2.b (WY - X)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "wqgiz2bLdsWr",
+        "outputId": "eab92230-85ac-4ba5-b6ae-c14fd6226e43"
+      },
+      "source": [
+        "import numpy as np\n",
+        "W = np.array ([[1,-3],[2,-2],[3,1]])\n",
+        "Y = np.array ([[1,2,0],[0,-1,2]])\n",
+        "X = np.array ([[3,2,1],[-1,2,3],[2,-1,1]])\n",
+        "\n",
+        "print(\"Vector W is\",W)\n",
+        "print()\n",
+        "print(\"Vector Y is\",Y)\n",
+        "print()\n",
+        "print(\"Vector X is\",X)\n",
+        "print()\n",
+        "print(\"WY-X\")\n",
+        "dot = np.dot (W,Y)\n",
+        "print(dot-X)"
+      ],
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Vector W is [[ 1 -3]\n",
+            " [ 2 -2]\n",
+            " [ 3  1]]\n",
+            "\n",
+            "Vector Y is [[ 1  2  0]\n",
+            " [ 0 -1  2]]\n",
+            "\n",
+            "Vector X is [[ 3  2  1]\n",
+            " [-1  2  3]\n",
+            " [ 2 -1  1]]\n",
+            "\n",
+            "WY-X\n",
+            "[[-2  3 -7]\n",
+            " [ 3  4 -7]\n",
+            " [ 1  6  1]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "vb8o_wM-eMOq"
+      },
+      "source": [
+        "2.c (YW - Z^2)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0oaMuNnHdzOT",
+        "outputId": "7a24137d-5957-42a8-8852-41301887da0a"
+      },
+      "source": [
+        "import numpy as np\n",
+        "\n",
+        "Y = np.array ([[1,2,0],[0,-1,2]])\n",
+        "W = np.array ([[1,-3],[2,-2],[3,1]])\n",
+        "Z = np.array ([[0,1],[2,3]])\n",
+        "\n",
+        "print(\"Vector Y is\",Y)\n",
+        "print()\n",
+        "print(\"Vector W is\",W)\n",
+        "print()\n",
+        "print(\"Vector Z is\",Z)\n",
+        "print()\n",
+        "print(\"(YW - Z^2)\")\n",
+        "print(np.dot(Y,W)-Z^2)"
+      ],
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Vector Y is [[ 1  2  0]\n",
+            " [ 0 -1  2]]\n",
+            "\n",
+            "Vector W is [[ 1 -3]\n",
+            " [ 2 -2]\n",
+            " [ 3  1]]\n",
+            "\n",
+            "Vector Z is [[0 1]\n",
+            " [2 3]]\n",
+            "\n",
+            "(YW - Z^2)\n",
+            "[[ 7 -6]\n",
+            " [ 0  3]]\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
